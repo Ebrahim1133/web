@@ -8,6 +8,7 @@ console.log(taskAdd);
 let editId,
 isEditTask = false,
 
+
 todos = JSON.parse(localStorage.getItem("todo-list"));
 var completed =0;
 var pending =0;
@@ -22,7 +23,9 @@ filters.forEach(btn => {
 });
 function showTodo(filter) {
     let liTag = "";
-
+    showNumberOfPending();
+    showNumberOfCompleted();
+    
     if(todos) {
         showNumberOfPending();
         showNumberOfCompleted();
@@ -45,13 +48,15 @@ function showTodo(filter) {
             }
         });
     }
+   
     taskBox.innerHTML = liTag || `<span>You don't have any task here</span>`;
     let checkTask = taskBox.querySelectorAll(".task");
     !checkTask.length ? clearAll.classList.remove("active") : clearAll.classList.add("active");
     taskBox.offsetHeight >= 300 ? taskBox.classList.add("overflow") : taskBox.classList.remove("overflow");
-    
     showNumberOfPending();
     showNumberOfCompleted();
+    
+   
 }
 showTodo("all");
 showNumberOfPending();
@@ -77,6 +82,8 @@ function updateStatus(selectedTask) {
         todos[selectedTask.id].status = "pending";
     }
     localStorage.setItem("todo-list", JSON.stringify(todos))
+    showNumberOfPending();
+    showNumberOfCompleted();
 }
 function editTask(taskId, textName) {
     editId = taskId;
@@ -84,6 +91,8 @@ function editTask(taskId, textName) {
     taskInput.value = textName;
     // taskInput.focus();
     taskInput.classList.add("active");
+     showNumberOfPending();
+    showNumberOfCompleted();
 }
 function deleteTask(deleteId, filter) {
     isEditTask = false;
@@ -94,12 +103,14 @@ function deleteTask(deleteId, filter) {
     showNumberOfCompleted();
 }
 clearAll.addEventListener("click", () => {
+    sum = 0;
+    sum2 = 0;
     isEditTask = false;
     todos.splice(0, todos.length);
     localStorage.setItem("todo-list", JSON.stringify(todos));
     showTodo()
-    showNumberOfPending();
-    showNumberOfCompleted();
+   document.getElementById("sp1").innerHTML=String(sum);
+   document.getElementById("sp2").innerHTML=String(sum2);
 });
 function takAdded(){
     
@@ -134,17 +145,19 @@ function showNumberOfPending(){
         
         if(todos[index].status == "pending"){sum++;}
         
-        document.getElementById("sp1").innerHTML=sum;
+        document.getElementById("sp1").innerHTML=String(sum);
+       
     }
     
 }
 function showNumberOfCompleted(){
-    sum =0;
+    sum2 =0;
     for (let index = 0; index < todos.length; index++) {
        
-        if(todos[index].status == "completed"){sum++;}
-        console.log(sum);
-        document.getElementById("sp2").innerHTML=sum;
+        if(todos[index].status == "completed"){sum2++;}
+        console.log(sum2);
+        document.getElementById("sp2").innerHTML=String(sum2);
+        
     }
 
   
