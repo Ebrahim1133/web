@@ -1,7 +1,10 @@
 const taskInput = document.querySelector(".task-input input"),
+taskAdd = document.getElementById("add-btn"),
+
 filters = document.querySelectorAll(".filters span"),
 clearAll = document.querySelector(".clear-btn"),
 taskBox = document.querySelector(".task-box");
+console.log(taskAdd);
 let editId,
 isEditTask = false,
 
@@ -51,6 +54,8 @@ function showTodo(filter) {
     showNumberOfCompleted();
 }
 showTodo("all");
+showNumberOfPending();
+showNumberOfCompleted();
 function showMenu(selectedTask) {
     let menuDiv = selectedTask.parentElement.lastElementChild;
     menuDiv.classList.add("show");
@@ -77,7 +82,7 @@ function editTask(taskId, textName) {
     editId = taskId;
     isEditTask = true;
     taskInput.value = textName;
-    taskInput.focus();
+    // taskInput.focus();
     taskInput.classList.add("active");
 }
 function deleteTask(deleteId, filter) {
@@ -96,24 +101,31 @@ clearAll.addEventListener("click", () => {
     showNumberOfPending();
     showNumberOfCompleted();
 });
-taskInput.addEventListener("keyup", e => {
-    let userTask = taskInput.value.trim();
-    if(e.key == "Enter" && userTask) {
-        if(!isEditTask) {
-            todos = !todos ? [] : todos;
-            let taskInfo = {name: userTask, status: "pending"};
-            todos.push(taskInfo);
-        } else {
-            isEditTask = false;
-            todos[editId].name = userTask;
+function takAdded(){
+    
+        console.log('add');
+        let userTask = taskInput.value.trim();
+        if(userTask) {
+            if(!isEditTask) {
+                todos = !todos ? [] : todos;
+                let taskInfo = {name: userTask, status: "pending"};
+                todos.push(taskInfo);
+            } else {
+                isEditTask = false;
+                todos[editId].name = userTask;
+            }
+            taskInput.value = "";
+            localStorage.setItem("todo-list", JSON.stringify(todos));
+            showTodo(document.querySelector("span.active").id);
+            showNumberOfPending();
+            showNumberOfCompleted();
         }
-        taskInput.value = "";
-        localStorage.setItem("todo-list", JSON.stringify(todos));
-        showTodo(document.querySelector("span.active").id);
-        showNumberOfPending();
-        showNumberOfCompleted();
-    }
-});
+        else{
+              alert('Enter Task Please');
+        }
+    
+}
+
 
 
 function showNumberOfPending(){

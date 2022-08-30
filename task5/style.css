@@ -29,6 +29,7 @@ body{
   height: 52px;
   padding: 0 25px;
   position: relative;
+  
 }
 .task-input img{
   top: 50%;
@@ -37,7 +38,7 @@ body{
 }
 .task-input input{
   height: 100%;
-  width: 100%;
+  width: 85%;
   outline: none;
   font-size: 18px;
   border-radius: 5px;
@@ -72,6 +73,25 @@ body{
 }
 .filters span.active{
   color: #ff3c59;
+}
+.task-input #add-btn{
+  border: none;
+  opacity: 0.6;
+  display: inline;
+  height: 100%;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 7px 20px;
+  border-radius: 5px;
+  letter-spacing: 0.3px;
+  opacity: 0.9;
+  transition: transform 0.25s ease;
+  background: linear-gradient(135deg, #3caeff 0%, #3ce2ff 100%);
+}
+#add-btn:active{
+  transform: scale(0.93);
 }
 .controls .clear-btn{
   border: none;
