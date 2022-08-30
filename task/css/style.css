@@ -1,0 +1,444 @@
+body p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: #999;
+}
+
+ .navbar .container .navbar-nav 
+{
+    padding: 0 0 0 350px;
+}  
+
+.navbar .container 
+{
+    padding: 0 0 0 100px;
+} 
+
+.navbar .container .navbar-nav li {
+    padding: 0 7px;
+}
+
+.navbar .container .navbar-nav .home {
+    color: #F25454;
+}
+
+.navbar .container .navbar-nav li a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600px;
+    font-size: 13px;
+}
+
+.navbar .container .navbar-nav li a:hover {
+    color: #F25454;
+    transition: all .5s;
+}
+
+
+
+
+header i {
+    color: white;
+    padding: 10px;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    position: fixed;
+    z-index: 9999;
+}
+
+#home .carousel-item .carousel-caption h1 {
+    height: 60vh;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 70px !important;
+    line-height: 1 !important;
+    width: 50%;
+    margin: auto;
+}
+
+
+
+#aboutus {
+    background-color: #fff;
+}
+
+#aboutus .cap {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding: 30px;
+}
+
+#aboutus .cap h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+#aboutus .shadow {
+    text-shadow: 50px 0px 5px #999;
+    
+}
+
+#aboutus .cap h1:after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 46%;
+    background-color: black;
+    width: 40px;
+    height: 1px;
+    margin-bottom: 10px;
+}
+
+
+
+.progress-bar {
+    height: 5px;
+    border-radius: 3px;
+    background-color: #F25454 !important;
+
+    
+}
+
+.progressbar {
+    height: 5px;
+   
+}
+
+
+#ourteam .cap {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding: 30px;
+}
+
+#ourteam .cap h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+#ourteam .cap h1:after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 46%;
+    background-color: black;
+    width: 40px;
+    height: 1px;
+    margin-bottom: 10px;
+}
+
+#ourteam .container .hov {
+    overflow: hidden;
+}
+
+#ourteam .container .hov .pic {
+    position: relative;
+    transition: all 1s;
+    border-radius: 5px;
+}
+
+#ourteam .container .hov .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 90px;
+    background-color: rgba(235, 100, 100, .9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 1s;
+    border-radius: 5px;
+    margin: 30px;
+}
+
+#ourteam .container .hov .overlay i {
+    padding: 10px;
+    transition-property: all;
+    transition-duration: .25s;
+    margin-top: 30px;
+    color: #fff;
+}
+
+#ourteam .container .card:hover .overlay {
+    opacity: 1;
+}
+
+#ourteam .container .card:hover .pic {
+    transform: scale(1.1, 1.1);
+}
+
+#ourteam .container .card:hover i {
+    margin-top: 0;
+}
+
+#ourteam .container .card:hover .card-title {
+    color: rgb(235, 100, 100);
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card {
+    border: none;
+    padding: 30px;
+}
+
+.idea .btn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+
+#services {
+    background-color: fafafa;
+    padding: 50px;
+}
+
+#services .cap {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding: 30px;
+}
+
+#services .cap h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+#services .cap h1:after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 46%;
+    background-color: black;
+    width: 40px;
+    height: 1px;
+    margin-bottom: 10px;
+}
+
+#services .crd {
+    padding: 20px;
+}
+
+#services .crd .iqon {
+    padding: 5px 10px 0 0;
+    color: #F25454;
+}
+
+#services .crd h5 {
+    transition: all .5s;
+}
+
+#services .crd:hover h5 {
+    color: #F25454;
+}
+
+
+
+
+
+
+
+#contactus {
+    background-color: #fafafa;
+}
+
+#contactus .cap {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding: 30px;
+}
+
+#contactus .cap h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+#contactus .cap h1:after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 46%;
+    background-color: black;
+    width: 40px;
+    height: 1px;
+    margin-bottom: 10px;
+}
+
+#contactus .contacts .info {
+    display: flex;
+    padding: 10px 20px;
+    border-bottom: .25px solid #999;
+    margin-bottom: 20px;
+}
+
+#contactus .contacts .no {
+    border: none;
+}
+
+#contactus .contacts .info h3:hover {
+    color: #F25454;
+    transition: all .5s;
+}
+
+#contactus .contacts .info p {
+    font-size: 15px;
+}
+
+#contactus .contacts .info .iqon {
+    color: #F25454;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    padding: 10px 0;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+form textarea {
+    width: 100%;
+    height: 100px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border: 2px solid #eee;
+}
+
+
+
+#foter {
+    text-align: center;
+    background-image: url('../images/map-image.png');
+    background-size: 100% 100%;
+    background-color: #222222;
+    color: #fff;
+    position: relative;
+}
+
+#foter .alone .btn {
+    border-radius: 60%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 95%;
+    left: 48.5%;
+    background-color: rgba(235, 100, 100, .9);
+    border: none;
+}
+
+#foter .alone .btn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#foter img {
+    padding: 50px;
+}
+
+#foter .info a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#foter .info p {
+    font-size: 15px;
+}
+
+#foter .info a:hover p {
+    color: #F25454;
+}
+
+#foter .info .btn {
+    margin: 5px;
+    color: #999;
+    background-color: transparent;
+    font-size: 15px;
+}
+
+#foter .info .btn:hover {
+    color: #F25454;
+    border: 1px solid #F25454;
+}
+
+
+
+
+footer {
+    background-color: #111111;
+    color: #fff;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+footer .container a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer .container a:hover {
+    color: #F25454;
+    transition: all .5s;
+}
+
+footer .container .social i {
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    #aboutus .cap {
+        width: 100%;
+    }
+    #ourteam .cap {
+        width: 100%;
+    }
+    #services .cap {
+        width: 100%;
+    }
+    #contactus .cap {
+        width: 100%;
+    }
+    #foter .alone .btn {
+        position: absolute;
+        bottom: 97.5%;
+        left: 44%;
+    }
+}
+
+

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enrollment Form</title>
+<style>
+  :root{
+	--bgcolor:#d6e1ba;
+	--blue:blue;
+	--black:#3D3F42;
+	--red:rgb(241, 241, 241);
+	--gray:#d8dce4;
+	--lightgray:#8e9095;
+}
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: monospace;
+}
+legend{
+  font-size: 20px;
+}
+body
+{
+        background: var(--bgcolor);
+}
+#content{
+	width: 850px;
+	height: 1000px;
+	margin: 100px auto;
+  padding: 10px;
+  border: 1px solid #beb2b2;
+    width: 732px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+	background: var(--red);
+  
+	box-shadow: 5px 21px 20px 20px #3d3f4238;
+}
+
+#header {
+    
+    padding: 10px;
+    color: rgb(10, 10, 10);
+}
+label{
+  font-size: 20;
+}
+fieldset{
+  height: 200;
+  
+
+  border: 1px solid #beb2b2;
+  padding: 10px;
+  
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+label{
+  font-size: 15px;
+
+}
+#header,#btn{
+  text-align: center;
+}
+#heading {
+    font-size:35px;
+    color: red;
+    
+}
+#hoppies1,#courses1{
+  height: 35px;
+  width: 150px;
+  font-size: 20px;
+  border: 1px solid #beb2b2;
+  -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
+}
+#fname ,#password ,#email,#hoppies,#courses{
+
+  height: 30px;
+  width: 200px;
+  border: 1px solid #beb2b2;
+  -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#submit,#reset{
+  margin: 15px;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  
+  border: 1px solid #beb2b2;
+  -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 25px;
+}
+#submit{
+  background-color: red;
+
+}
+label{
+  font-size: 25px;
+
+}
+#gender,#skill1,#skill2,#skill3{
+  width:15px ;
+  height: 15px;
+}
+      
+</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+</head>
+<body>
+
+
+    <div id="content">
+      <div  id="header">
+        <h1 id="heading" >Student Enrollment Form</h1>
+    </div>
+    <form action="action.php" target="_black" onsubmit="valid()" method="post" name="myform" >
+
+        <fieldset  >
+
+            <legend>Personal information:</legend>
+            <label for="fname" style="color: crimson">First name:</label><br />
+            <input type="text" id="fname" name="fname" value="" required min="15" max="20" /><br />
+            <label for="password" style="color: crimson">Password:</label><br />
+            <input type="password" id="password" name="password" value="" required  min="1" max="50" maxlength="50"/><br />
+            <label for="email" style="color: crimson">Email:</label><br />
+            <input type="email" id="email" name="email" value="" required  min="1" max="30" maxlength="30"/><br />
+            
+    
+            
+        </fieldset>
+
+          <br />
+          <br />
+                  
+          <br />
+          <br />  
+           
+          <br />
+
+
+            <label for="Gender" style="color: crimson">Gender:</label><br />
+            <input type="radio" id="gender" name="gender" value="male" />
+            <label for="red">Male</label><br />
+            <input type="radio" id="gender" name="gender" value="female" />
+            <label for="green">Female</label><br />
+            
+                  
+          <br />
+          <br />  
+          <br />
+            <label for="skills" style="color: crimson">Skills:</label><br />
+            <input type="checkbox" id="skill1" name="skill1" value="java" />
+            <label for="skill1"> Java</label><br />
+            <input type="checkbox" id="skill2" name="skill2" value="html" />
+            <label for="skill2"> Html</label><br />
+            <input type="checkbox" id="skill3" name="skill3" value="css" />
+            <label for="skill3"> Css</label>
+
+            
+            <br />
+            <br />
+            <br />
+
+            <label for="hoppies" style="color: crimson"  >Hoppies:</label>
+            <input list="hoppies" name="hoppies" id="hoppies1"/>
+            <datalist id="hoppies">
+              
+              <option value="Reading"></option>
+              <option value="Swimming"></option>
+              <option value="Football"></option>
+              <option value="Music"></option>
+              <option value="Social media"></option>
+            </datalist>
+            <br />
+            <br />
+            <br />
+
+            <br />
+            <label for="courses"  style="color: crimson">Choose a Courses:</label>
+            <select name="courses" id="courses1">
+               <option value="-1" selected>select..</option>
+                <option value="network">Network</option>
+                <option value="Programming">Cs</option>
+                <option value="software">SoftWare Engineering</option>
+                <option value="bioserver">BioServer</option>
+              
+              
+            </select>
+            <br />
+            <br />
+            <br />
+            <br />
+
+            <br />
+            <br />
+            <div id="btn">
+            <input type="submit" value="Submit"   style="text-align: center;" id="submit"/>
+            
+            <input type="reset" value="Reset" style="text-align: center;" id="reset"/>
+          </div>
+    </form>
+</div>
+
+   
+
+    <script src="validateform.js"></script>
+</body>
+</html>
