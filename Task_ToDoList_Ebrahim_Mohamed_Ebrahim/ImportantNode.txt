@@ -1,0 +1,21 @@
+Show Demo Video 
+
+Use : Html and Css and JavaScript
+
+Features:
+
+1- Add, Delete, Update, and Remove to-do items .
+
+
+2- Ability to filter the to-do based on status (All,Pending, Completed).
+
+ 
+3- Clear all Items.
+
+
+4- Count Number of Pending Tasks and Completed Tasks.
+
+
+5- Check From AddTask is empty or not.
+
+
