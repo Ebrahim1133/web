@@ -145,10 +145,10 @@ function showNumberOfPending(){
         
         if(todos[index].status == "pending"){sum++;}
         
-        document.getElementById("sp1").innerHTML=String(sum);
+        
        
     }
-    
+    document.getElementById("sp1").innerHTML=String(sum);
 }
 function showNumberOfCompleted(){
     sum2 =0;
@@ -156,9 +156,9 @@ function showNumberOfCompleted(){
        
         if(todos[index].status == "completed"){sum2++;}
         console.log(sum2);
-        document.getElementById("sp2").innerHTML=String(sum2);
+        
         
     }
-
+    document.getElementById("sp2").innerHTML=String(sum2);
   
 }
